@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CogniLearn AI - The Future of Learning</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Urbanist', sans-serif;
+            background-color: #0a0a16;
+            color: #e2e8f0;
+        }
+        .glass-nav {
+            background: rgba(10, 10, 22, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card {
+            background: rgba(19, 19, 43, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #a78bfa, #c084fc, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="selection:bg-violet-500 selection:text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/20">
+                    <i data-lucide="brain" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-bold text-white tracking-tight">CogniLearn AI</span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#problem" class="text-slate-300 hover:text-white text-sm font-medium transition-colors">Problem</a>
+                <a href="#features" class="text-slate-300 hover:text-white text-sm font-medium transition-colors">Features</a>
+                <a href="#how-it-works" class="text-slate-300 hover:text-white text-sm font-medium transition-colors">How it Works</a>
+                <a href="#tech" class="text-slate-300 hover:text-white text-sm font-medium transition-colors">Tech Stack</a>
+                
+                <a href="#" class="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-full text-sm font-semibold border border-slate-700 transition-all flex items-center gap-2 hover:border-violet-500/50">
+                    <i data-lucide="github" class="w-4 h-4"></i> Source Code
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#0a0a16] border-b border-white/10 p-6 flex flex-col gap-4 shadow-2xl">
+            <a href="#problem" class="text-slate-300 py-2 border-b border-white/5">Problem</a>
+            <a href="#features" class="text-slate-300 py-2 border-b border-white/5">Features</a>
+            <a href="#how-it-works" class="text-slate-300 py-2 border-b border-white/5">How it Works</a>
+            <a href="#tech" class="text-slate-300 py-2">Tech Stack</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Blobs -->
+        <div class="blob bg-violet-600 w-[500px] h-[500px] top-0 left-1/4 animate-pulse"></div>
+        <div class="blob bg-indigo-600 w-[400px] h-[400px] bottom-0 right-0"></div>
+        <div class="blob bg-cyan-600 w-[300px] h-[300px] top-1/2 left-1/2 opacity-20"></div>
+        
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center flex flex-col items-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-violet-300 text-sm font-medium mb-8 backdrop-blur-sm animate-float">
+                <i data-lucide="sparkles" class="w-4 h-4 text-violet-400"></i>
+                <span>Revolutionizing Tech Education</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.1] mb-8">
+                The Voice of <br />
+                <span class="gradient-text">Future Learning</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12">
+                An intelligent, multilingual mentor that helps you build resumes, master coding, and crack interviews—all through simple voice commands in <strong>Hindi, Kannada, Tamil, Telugu, and English.</strong>
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 w-full justify-center">
+                <a href="#features" class="px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-slate-200 transition-all transform hover:-translate-y-1 shadow-xl shadow-white/10 flex items-center justify-center gap-2">
+                    Explore Features <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+            <!-- Mockup -->
+            <div class="mt-20 relative w-full max-w-4xl mx-auto transform hover:scale-[1.02] transition-transform duration-500">
+                <div class="absolute -inset-1 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-2xl blur opacity-30"></div>
+                <div class="relative bg-[#13132b] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="h-10 bg-[#0f0f23] border-b border-white/5 flex items-center px-4 gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                    </div>
+                    <div class="p-8 md:p-16 flex flex-col items-center justify-center min-h-[300px] text-center">
+                        <div class="w-24 h-24 bg-violet-500/20 rounded-full flex items-center justify-center mb-6 relative">
+                            <div class="absolute inset-0 rounded-full border-2 border-violet-500/30 animate-ping"></div>
+                            <i data-lucide="mic" class="w-10 h-10 text-violet-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">"Create a study plan for Python in Hindi"</h3>
+                        <p class="text-slate-500 font-mono text-sm mt-2">CogniLearn AI is listening (Auto-Detecting Language)...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section id="problem" class="py-24 bg-[#0a0a16] relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">The Problem</h2>
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-2xl hover:bg-white/10 transition-colors">
+                            <h3 class="text-xl font-bold text-red-400 mb-2 flex items-center gap-2"><i data-lucide="layers" class="w-5 h-5"></i> Fragmented Learning</h3>
+                            <p class="text-slate-400">Students switch between 5+ tabs: ChatGPT, YouTube, Notion, and Compilers. Focus is lost in the chaos.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl hover:bg-white/10 transition-colors">
+                            <h3 class="text-xl font-bold text-red-400 mb-2 flex items-center gap-2"><i data-lucide="languages" class="w-5 h-5"></i> Language Barriers</h3>
+                            <p class="text-slate-400">High-quality tech education is 90% English. Brilliant regional minds are left behind due to the language gap.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl hover:bg-white/10 transition-colors">
+                            <h3 class="text-xl font-bold text-red-400 mb-2 flex items-center gap-2"><i data-lucide="user-x" class="w-5 h-5"></i> Lack of Mentorship</h3>
+                            <p class="text-slate-400">Video courses are passive. They don't adapt if you miss a day, and they can't conduct a mock interview.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-3xl blur-2xl opacity-20"></div>
+                    <div class="relative bg-[#13132b] border border-white/10 rounded-3xl p-10">
+                        <div class="inline-block px-4 py-1 rounded-full bg-violet-500/20 text-violet-300 text-sm font-bold mb-6">The Solution</div>
+                        <h2 class="text-4xl font-bold text-white mb-6">Unified Intelligent Dashboard</h2>
+                        <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                            CogniLearn replaces the chaos with a single, voice-controlled ecosystem. It understands your native language, tracks your progress, and builds your career tools for you.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-slate-300">
+                                <div class="mt-1 w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="check" class="w-3 h-3 text-green-400"></i>
+                                </div>
+                                Native Language Support (Hindi, Kannada, Tamil, Telugu)
+                            </li>
+                            <li class="flex items-start gap-3 text-slate-300">
+                                <div class="mt-1 w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="check" class="w-3 h-3 text-green-400"></i>
+                                </div>
+                                Dynamic Study Plans that adjust to your pace
+                            </li>
+                            <li class="flex items-start gap-3 text-slate-300">
+                                <div class="mt-1 w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="check" class="w-3 h-3 text-green-400"></i>
+                                </div>
+                                Interactive Resume Builder & Mock Interviews
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-[#0a0a16] relative z-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Everything You Need <br/> To Succeed</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">CogniLearn isn't just a chatbot. It's a suite of powerful tools designed to take you from learning to earning.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="mic" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Core AI</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Multilingual Voice</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">A "Jarvis-like" experience. Speak in English, Hindi, Kannada, Tamil, or Telugu. Includes a smart 10s wait timer.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="calendar" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Planning</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Dynamic Study Planner</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">Generates detailed schedules. If you mark a task as 'Missed', the AI automatically recalculates and adds revision.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="file-text" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Career</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Resume Builder</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">The AI interviews you step-by-step about your skills and generates a professional formatted Markdown resume.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="users" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Career</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Mock Interviewer</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">Simulates a strict technical interview. Listens to your voice answers, rates them 1-10, and provides feedback.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="code-2" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Dev</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Coding Assistant</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">Stuck on logic? Ask for code snippets in your native language. The AI generates clean, commented code instantly.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="zap" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Study</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Active Recall</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">Instantly generates Flashcards and Quizzes from any topic you are studying to ensure deep retention.</p>
+                </div>
+
+                <!-- Feature 7: Mock Test -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="book-open-check" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Test</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Comprehensive Mock Tests</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">Generate full-length exams on any subject with mixed difficulty levels to simulate real exam conditions.</p>
+                </div>
+
+                <!-- Feature 8: Aptitude -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="calculator" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Prep</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Aptitude & Reasoning</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">Dedicated practice mode for logical reasoning and quantitative aptitude essential for placements.</p>
+                </div>
+
+                <!-- Feature 9: Jobs -->
+                <div class="bg-[#13132b] p-8 rounded-2xl border border-white/5 hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-violet-600 transition-colors duration-300">
+                            <i data-lucide="search" class="text-white w-7 h-7"></i>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-white/5 text-[10px] uppercase font-bold text-slate-400 tracking-wider">Jobs</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">Internship & Job Finder</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">AI-curated list of relevant opportunities matching your exact skill set and experience level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Demo -->
+    <section id="how-it-works" class="py-24 bg-gradient-to-b from-[#0a0a16] to-[#05050a] relative z-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">See "Resume Builder" in Action</h2>
+                    <div class="space-y-6">
+                        <!-- Step 1 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-violet-600 flex items-center justify-center text-white font-bold">1</div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Voice Activated Start</h4>
+                                <p class="text-slate-400 text-sm">User says: <em class="text-violet-400">"Build a resume for a Java Developer."</em></p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-violet-600 flex items-center justify-center text-white font-bold">2</div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Interactive Interview</h4>
+                                <p class="text-slate-400 text-sm">The AI asks: "What is your education?" &rarr; User speaks answer.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-violet-600 flex items-center justify-center text-white font-bold">3</div>
+                            <div class="w-full">
+                                <h4 class="text-white font-bold text-lg">Instant Generation</h4>
+                                <p class="text-slate-400 text-sm mb-3">Generates a formatted document instantly.</p>
+                                <div class="p-4 bg-white rounded text-slate-800 text-xs font-mono shadow-lg opacity-90">
+                                    <div class="font-bold text-lg uppercase border-b pb-2 mb-2">Rahul Kumar</div>
+                                    <div class="font-bold text-violet-700">SKILLS</div>
+                                    <div>- Java, Spring Boot, React</div>
+                                    <div class="font-bold text-violet-700 mt-2">EXPERIENCE</div>
+                                    <div>- Junior Dev @ TechCorp (2023)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex-1 w-full">
+                    <div class="relative bg-slate-800 rounded-2xl p-2 border border-slate-700 shadow-2xl">
+                        <!-- Decorative Blob -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-fuchsia-500/30 rounded-full blur-[50px]"></div>
+                        
+                        <div class="bg-[#0f0f23] rounded-xl p-6 min-h-[400px] flex flex-col justify-between">
+                            <div class="space-y-4">
+                                <div class="flex gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-violet-600 flex-shrink-0"></div>
+                                    <div class="bg-slate-800 p-3 rounded-lg rounded-tl-none text-slate-300 text-sm">
+                                        Hello! I am ready to build your resume. What is your Full Name?
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 flex-row-reverse">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-500 flex-shrink-0"></div>
+                                    <div class="bg-violet-600 p-3 rounded-lg rounded-tr-none text-white text-sm">
+                                        My name is Rahul Kumar.
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-violet-600 flex-shrink-0"></div>
+                                    <div class="bg-slate-800 p-3 rounded-lg rounded-tl-none text-slate-300 text-sm">
+                                        Got it, Rahul. What is your Education?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex items-center gap-2 text-slate-500 text-xs justify-center">
+                                <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                                Listening... (10s Wait Timer Active)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech" class="py-20 bg-[#0a0a16] border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-white mb-10 opacity-80">Built With</h2>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 items-center">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 bg-[#13132b] rounded-full flex items-center justify-center border border-white/10 hover:border-cyan-500/50 transition-colors">
+                        <i data-lucide="code-2" class="text-cyan-400 w-8 h-8"></i>
+                    </div>
+                    <span class="text-slate-500 text-xs font-bold">REACT.JS</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 bg-[#13132b] rounded-full flex items-center justify-center border border-white/10 hover:border-blue-500/50 transition-colors">
+                        <i data-lucide="cpu" class="text-blue-400 w-8 h-8"></i>
+                    </div>
+                    <span class="text-slate-500 text-xs font-bold">GEMINI API</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 bg-[#13132b] rounded-full flex items-center justify-center border border-white/10 hover:border-red-500/50 transition-colors">
+                        <i data-lucide="mic" class="text-red-400 w-8 h-8"></i>
+                    </div>
+                    <span class="text-slate-500 text-xs font-bold">WEB SPEECH API</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 bg-[#13132b] rounded-full flex items-center justify-center border border-white/10 hover:border-fuchsia-500/50 transition-colors">
+                        <i data-lucide="palette" class="text-fuchsia-400 w-8 h-8"></i>
+                    </div>
+                    <span class="text-slate-500 text-xs font-bold">TAILWIND</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#05050a] py-12 border-t border-white/10 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center items-center gap-2 mb-6">
+                <div class="w-8 h-8 rounded-lg bg-violet-600 flex items-center justify-center">
+                    <i data-lucide="brain" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="text-xl font-bold text-white">CogniLearn AI</span>
+            </div>
+            <p class="text-slate-500 text-sm mb-8 max-w-md mx-auto">
+                A Hackathon Project designed to democratize technology education through AI and native language support.
+            </p>
+            <div class="text-slate-600 text-xs">
+                &copy; 2026 CogniLearn AI. Created for Innovation.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons & Scroll Logic -->
+    <script>
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.remove('py-6');
+                navbar.classList.add('py-4');
+            } else {
+                navbar.classList.remove('glass-nav');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+    </script>
+</body>
+</html>
